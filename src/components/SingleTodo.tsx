@@ -1,5 +1,7 @@
 import React from 'react'
 import { Todo } from '../model'
+import { AiFillDelete, AiFillEdit } from 'react-icons/ai'
+import { MdDone } from 'react-icons/md'
 
 type Props = {
   todo: Todo
@@ -13,7 +15,17 @@ const SingleTodo = ({todo, todos, setTodos}: Props) => {
       <span className="todos__single--text">
         {todo.todo}
       </span>
-      <div></div>
+      <div>
+        <span className="icon">
+          <AiFillEdit />
+        </span>
+        <span className="icon">
+          <AiFillDelete />
+        </span>
+        <span className="icon">
+          <MdDone />
+        </span>
+      </div>
     </form>
   )
 }
